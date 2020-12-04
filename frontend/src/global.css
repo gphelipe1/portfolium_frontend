@@ -1,3 +1,7 @@
+html { 
+    background: url(./assets/background_tam3.png) no-repeat center center fixed;
+}
+
 textarea{
     width: 100px;
     height: 100px;
@@ -33,6 +37,17 @@ button{
     border-radius: 8px;
     
 }
-.button:hover{ /*escurecer quando passar o mouse*/
-    filter: brightness(83%); /*filtro do CSS, escurecendo 10%*/
+
+.button:hover{
+    filter: opacity(90%) 
+}
+.homelink{
+    background: #ffffff79;
+    color: #444444;
+    font-weight: 25''0;
+    display: inline-block;
+    line-height: 40px;
+    width: 104px;
+    margin-left:1%;
+
 }

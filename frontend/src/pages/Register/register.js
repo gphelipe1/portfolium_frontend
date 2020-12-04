@@ -1,25 +1,29 @@
 import './register.css';
 import React from 'react';
-import {withRouter} from 'react-router-dom';
+import {withRouter, Link} from 'react-router-dom';
 import profileSymb from '../../assets/profile.png';
 import Logo from '../../assets/logo.png';
 
 class Register extends React.Component{
 
+    constructor(props){
+        super(props);
+        this.login = {
+            
+        }
+    }
+
     signin = () => {
         this.props.history.push("/login");
-    }
-    myFunction = () =>{
-        alert("CLICKED");
     }
 
     render(){
         return(
             <div>
 
-                <button onClick={this.myFunction}>
+                <Link className="homelink" to="/">
                     <img className = "logoImage" alt ="logo" src = {Logo}/>
-                </button>
+                </Link>
 
                 <div className = "registerContainer">
                     

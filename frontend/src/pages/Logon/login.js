@@ -1,23 +1,22 @@
 import './login.css';
-import React from 'react';
-import {withRouter} from 'react-router-dom';
+import React, {useState} from 'react';
+import {withRouter, Link, useHistory} from 'react-router-dom';
 import Logo from '../../assets/logo.png'
 
+
 class Login extends React.Component{
+
+  
   signup = () =>{
     this.props.history.push("/register");
-  }
-
-  myFunction = ()=>{
-    alert("CLICKED");
   }
 
   render(){
     return (
       <div>
-        <button onClick={this.myFunction}>
+        <Link className="homelink" to="/">
             <img className="logoImage" alt ="logo" src = {Logo}/>
-        </button>
+        </Link>
         <div className = "loginContainer">
           
           <div className = "content">

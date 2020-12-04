@@ -31,10 +31,6 @@ input{
     margin-top: 10px;
 }
 
-html { 
-    background: url(../../assets/background_tam3.png) no-repeat center center fixed;
-}
-
 hr{
     color: #c5c5c56e;
     margin-left: 60px;
@@ -63,6 +59,7 @@ button{
     border: 0px;
     border-radius: 8px;
 }
+
 section{
     display: flex;
 }
