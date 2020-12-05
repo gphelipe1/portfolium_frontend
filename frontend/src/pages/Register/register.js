@@ -55,7 +55,7 @@ class Register extends React.Component{
                 
                         <section>
                     
-                            <p>Already have an account ?</p>
+                            <p>Already have an account?</p>
                     
                             <button onClick={this.signin} >Sign In</button>
                     
