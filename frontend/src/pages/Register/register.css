@@ -2,6 +2,9 @@ html {
     background: url(../../assets/background_tam3.png) no-repeat center center fixed;
 }
 
+form{
+    display: inline;
+}
 .registerContainer{
     max-width: 700px;
     width: 100%;
@@ -38,8 +41,7 @@ input{
 }
 
 .button{
-    margin-left: 100px;
-    margin-top: 10px;
+    margin-left: 100px
 }
 
 hr{
@@ -48,7 +50,6 @@ hr{
     width: 72%;
     margin-top: 25px;
 }
-
 p{
     margin-top: -5px;
     margin-left: 100px;
@@ -56,6 +57,7 @@ p{
     font-weight: bold;
     font-size: 12px;
 }
+
 
 section{
     display: flex;
