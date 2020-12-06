@@ -3,3 +3,9 @@ export const userIdKey = `${project}/userId`;
 export const userTypeKey = `${project}/userType`;
 export const userNameKey = `${project}/userName`;
 export const userDescriptionKey = `${project}/userDescription`;
+
+export const PATHS = {
+  HOME: "/",
+  LOGIN: "/login",
+  PROFILE: "/profile",
+};

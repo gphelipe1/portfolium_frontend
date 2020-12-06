@@ -8,7 +8,7 @@ import Logo from "./assets/logo";
 import Button from "./components/Button";
 import Divider from "./components/Divider";
 
-import { userIdKey } from "./utils/constansts";
+import { userIdKey, PATHS } from "./utils/constansts";
 
 import { Container, Header, Wrapper, Option, LogoWrapper } from "./styles";
 
@@ -18,7 +18,7 @@ const App = () => {
 
   const renderUserInfo = () => {
     return !userId ? (
-      <Link to="/login">
+      <Link to={PATHS.LOGIN}>
         <Button>Login</Button>
       </Link>
     ) : (
@@ -28,16 +28,16 @@ const App = () => {
 
   const renderHeader = () => (
     <Header>
-      <Link to="/">
+      <Link to={PATHS.HOME}>
         <LogoWrapper>
           <Logo />
         </LogoWrapper>
       </Link>
       <Wrapper>
-        <Link to="/">
+        <Link to={PATHS.HOME}>
           <Option>PORTIFÓLIOS</Option>
         </Link>
-        <Link to="/profile">
+        <Link to={PATHS.PROFILE}>
           <Option>PERFIL</Option>
         </Link>
       </Wrapper>
