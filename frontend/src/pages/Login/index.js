@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Card from "../../components/Card";
 import Input from "../../components/Input";
@@ -8,13 +8,22 @@ import Divider from "../../components/Divider";
 import { Container, CardWrapper, Form, Footer } from "./styles";
 
 const Login = () => {
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
+
+  const onChange = (setter) => (e) => {
+    const { value } = e.target;
+
+    setter(value);
+  };
+
   return (
     <Container>
       <CardWrapper>
         <Card>
           <Form>
-            <Input placeholder={"Login"} />
-            <Input placeholder={"Senha"} />
+            <Input placeholder={"Matrícula"} onChange={onChange(setLogin)} />
+            <Input placeholder={"Senha"} onChange={onChange(setPassword)} />
             <Button>Login</Button>
           </Form>
           <Divider />

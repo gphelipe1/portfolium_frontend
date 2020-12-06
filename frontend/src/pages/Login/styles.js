@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const CardWrapper = styled.div`
   display: flex;
-  width: 50%;
+  width: 40%;
 `;
 
 export const Form = styled.div`
