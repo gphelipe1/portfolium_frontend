@@ -6,7 +6,7 @@ const userTypeKey = `${project}/userType`;
 const userNameKey = `${project}/userName`;
 const userDescriptionKey = `${project}/userDescription`;
 
-export default () => {
+export default function Storage() {
   const [userId, setID] = useState(null);
   const [userType, setType] = useState(null);
   const [userName, setName] = useState(null);
@@ -59,4 +59,4 @@ export default () => {
     setUserName,
     setUserDescription,
   };
-};
+}
