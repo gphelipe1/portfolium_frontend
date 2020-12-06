@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 
 const project = "@portifolium";
+const userIdKey = `${project}/userId`;
+const userTypeKey = `${project}/userType`;
+const userNameKey = `${project}/userName`;
+const userDescriptionKey = `${project}/userDescription`;
 
 export default () => {
   const [userId, setID] = useState(null);
@@ -8,7 +12,17 @@ export default () => {
   const [userName, setName] = useState(null);
   const [userDescription, setDescription] = useState(null);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const userId = localStorage.getItem(userIdKey);
+    const userType = localStorage.getItem(userTypeKey);
+    const userName = localStorage.getItem(userNameKey);
+    const userDescription = localStorage.getItem(userDescriptionKey);
+
+    setID(userId);
+    setType(userType);
+    setName(userName);
+    setDescription(userDescription);
+  }, []);
 
   const getUserId = () => userId;
   const getUserType = () => userType;
@@ -17,22 +31,22 @@ export default () => {
 
   const setUserId = (id) => {
     setID(id);
-    localStorage.setItem(`${project}/userId`, id);
+    localStorage.setItem(userIdKey, id);
   };
 
   const setUserType = (type) => {
     setType(type);
-    localStorage.setItem(`${project}/userType`, type);
+    localStorage.setItem(userTypeKey, type);
   };
 
   const setUserName = (name) => {
     setName(name);
-    localStorage.setItem(`${project}/userName`, name);
+    localStorage.setItem(userNameKey, name);
   };
 
   const setUserDescription = (description) => {
     setDescription(description);
-    localStorage.setItem(`${project}/userDescription`, description);
+    localStorage.setItem(userDescriptionKey, description);
   };
 
   return {
