@@ -50,8 +50,8 @@ const Portifolio = () => {
   const renderStudents = () => {
     return (
       <>
-        {students.map((student) => (
-          <CardWrapper>{renderCard(student)}</CardWrapper>
+        {students.map((student, idx) => (
+          <CardWrapper key={idx}>{renderCard(student)}</CardWrapper>
         ))}
       </>
     );
