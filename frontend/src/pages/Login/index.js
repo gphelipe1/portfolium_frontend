@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import store from "../../storage";
+import { useStore } from "../../store";
 import { auth } from "../../services/auth";
 
 import Card from "../../components/Card";
@@ -13,7 +13,13 @@ import { Container, CardWrapper, Form, Footer } from "./styles";
 const Login = () => {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
-  const { setUserId, setUserDescription, setUserName, setUserType } = store();
+
+  const {
+    setUserId,
+    setUserName,
+    setUserDescription,
+    setUserType,
+  } = useStore();
 
   const onChange = (setter) => (e) => {
     const { value } = e.target;
