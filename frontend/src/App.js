@@ -2,16 +2,29 @@ import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 import Routes from "./routes";
-import { withStore } from "./store";
+import { withStore, useStore } from "./store";
 
 import Logo from "./assets/logo";
 import Button from "./components/Button";
 import Divider from "./components/Divider";
 
+import { userIdKey } from "./utils/constansts";
+
 import { Container, Header, Wrapper, Option, LogoWrapper } from "./styles";
 
 const App = () => {
+  const userId = localStorage.getItem(userIdKey);
   const ContainerWithStore = withStore(Container);
+
+  const renderUserInfo = () => {
+    return userId ? (
+      <Link to="/login">
+        <Button>Login</Button>
+      </Link>
+    ) : (
+      <Wrapper />
+    );
+  };
 
   const renderHeader = () => (
     <Header>
@@ -28,9 +41,7 @@ const App = () => {
           <Option>PERFIL</Option>
         </Link>
       </Wrapper>
-      <Link to="/login">
-        <Button>Login</Button>
-      </Link>
+      {renderUserInfo()}
     </Header>
   );
 

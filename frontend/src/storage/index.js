@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 
-const project = "@portifolium";
-const userIdKey = `${project}/userId`;
-const userTypeKey = `${project}/userType`;
-const userNameKey = `${project}/userName`;
-const userDescriptionKey = `${project}/userDescription`;
+import {
+  userIdKey,
+  userTypeKey,
+  userNameKey,
+  userDescriptionKey,
+} from "../utils/constansts";
 
 export default function Storage() {
   const [userId, setID] = useState(null);
