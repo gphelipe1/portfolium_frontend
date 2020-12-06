@@ -17,7 +17,7 @@ const App = () => {
   const ContainerWithStore = withStore(Container);
 
   const renderUserInfo = () => {
-    return userId ? (
+    return !userId ? (
       <Link to="/login">
         <Button>Login</Button>
       </Link>
