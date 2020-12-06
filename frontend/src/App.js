@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 import Routes from "./routes";
-import { withStore, useStore } from "./store";
+import { withStore } from "./store";
 
 import Logo from "./assets/logo";
 import Button from "./components/Button";

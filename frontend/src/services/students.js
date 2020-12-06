@@ -1,5 +1,3 @@
-import api from "./api";
-
 const fakeStudents = [];
 
 for (let i = 0; i < 20; i++) {

@@ -1,5 +1,3 @@
-import api from "./api";
-
 export const auth = async ({ login, senha }) => {
   return {
     id: "Fake_ID",
