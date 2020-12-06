@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from "react";
 
+import { reduceText } from "../../utils";
 import { findStudents } from "../../services/students";
 
 import Tag from "../../components/Tag";
 import Card from "../../components/Card";
 import Divider from "../../components/Divider";
 
-import { Container, CardWrapper, Description, Name } from "./styles";
+import {
+  Container,
+  CardWrapper,
+  Description,
+  Name,
+  TagWrapper,
+} from "./styles";
 
 const Portifolio = () => {
   const [students, setStudents] = useState([]);
@@ -22,16 +29,19 @@ const Portifolio = () => {
 
   const renderCard = (student) => {
     const { descricao, nome, tecnologias } = student;
+
     return (
       <>
         <Card>
           <Name>{nome}</Name>
           <Divider />
-          <Description>{descricao}</Description>
+          <Description>{reduceText(descricao)}</Description>
           <Divider />
-          {tecnologias.map((el, idx) => (
-            <Tag key={idx}>{el}</Tag>
-          ))}
+          <TagWrapper>
+            {tecnologias.map((el, idx) => (
+              <Tag key={idx}>{el}</Tag>
+            ))}
+          </TagWrapper>
         </Card>
       </>
     );
