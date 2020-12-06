@@ -1,28 +1,8 @@
-import Axios from 'axios';
+import axios from "axios";
 
-const Api = Axios.create({
-    baseURL: 'https://latest.free.beeceptor.com',
+const api = axios.create({
+  baseURL: "https://portifolium.free.beeceptor.com",
+  timeout: 5000,
 });
-/**
-class Api{
-    constructor(apiURL) {
-        this.apiURL = apiURL
-    }
 
-    post(url, objeto){
-        return instance.post(`${this.apiURL}${url}`, objeto)
-    }
-
-    put(url, objeto){
-        return instance.put(`${this.apiURL}${url}`, objeto)
-    }
-    delete(url){
-        return instance.delete(`${this.apiURL}${url}`)
-    }
-    get(url){
-        return instance.get(`${this.apiURL}${url}`)
-    }
-}
- */
-
-export default Api;
+export default api;
