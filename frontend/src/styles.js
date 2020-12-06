@@ -22,6 +22,7 @@ export const Header = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 10px;
 `;
 
 export const Wrapper = styled.div`

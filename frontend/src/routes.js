@@ -1,19 +1,18 @@
-import React from 'react'
-import {Route, Switch, HashRouter} from 'react-router-dom';
-import Register from './pages/Register/register.js';
-import Login from './pages/Logon/login.js';
-import Home from './pages/Home/home.js';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
 
-function Rotas(){
-    return(
-        <HashRouter>
-            <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/login" component={Login}/>
-                <Route path="/register" component={Register}/>
-            </Switch>
-        </HashRouter>
-    );
-}
+import Login from "./pages/Login";
+import Portifolio from "./pages/Portifolios";
+import Profile from "./pages/Profile";
+
+const Rotas = () => {
+  return (
+    <Switch>
+      <Route path="/" component={Portifolio} exact />
+      <Route path="/login" component={Login} exact />
+      <Route path="/profile" component={Profile} exact />
+    </Switch>
+  );
+};
 
 export default Rotas;
