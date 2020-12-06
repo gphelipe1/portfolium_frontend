@@ -4,7 +4,7 @@ export const auth = async ({ login, senha }) => {
     nome: "Dayvson Almeida",
     codigoAcesso: "12344",
     senha: "string",
-    descricao: "string",
+    descricao: "Descrição Maneira do Aluno",
     criadoEm: "2020-12-05",
     tipoUsuario: {
       descricao: "aluno",

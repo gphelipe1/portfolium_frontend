@@ -1,4 +1,5 @@
 const fakeStudents = [];
+const fakeStudentProjects = [];
 
 for (let i = 0; i < 20; i++) {
   fakeStudents.push({
@@ -15,6 +16,21 @@ for (let i = 0; i < 20; i++) {
       Nulla blandit vestibulum mattis. Mauris faucibus justo eget lacus condimentum, facilisis tincidunt quam faucibus. Etiam vel viverra nibh, a dictum libero. Phasellus in ullamcorper neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus mi nibh, lobortis pharetra lorem condimentum sagittis. Maecenas consequat ornare varius. Curabitur placerat ultricies arcu, eu consequat arcu mollis at. Phasellus in sapien sit amet libero volutpat aliquet. Aenean et lorem eu massa posuere viverra ut in augue. Morbi ac tempus tellus, vel suscipit nulla. Cras lacus odio, egestas vel sapien a, condimentum molestie magna. Fusce eu orci consequat, venenatis dolor id, commodo sapien. Sed ipsum lectus, pulvinar nec sapien at, rutrum dapibus risus. Nullam ac condimentum mauris, nec rutrum sem.`,
     tecnologias: ["React", "Node", "Java", "JavaScript", "Python"],
   });
+
+  fakeStudentProjects.push({
+    aluno: {
+      nome: "Dayvson",
+      matricula: "12343",
+    },
+    nome: `Projeto Maneiro ${i}`,
+    descricao: `Descrição top do projeto ${i}`,
+    validado: i % 2 !== 0 ? null : i % 3 === 0 ? true : false,
+    tecnologias: [
+      {
+        descricao: "Java",
+      },
+    ],
+  });
 }
 
 export const findStudents = async () => {
@@ -26,6 +42,18 @@ export const findStudents = async () => {
     return data;
   } catch (err) {
     console.log(`Erro ao buscar Alunos`, err);
+    return [];
+  }
+};
+
+export const findStudentProjects = async (id) => {
+  try {
+    // const response = await api.get(`/alunos/${id}/projetos`);
+    const data = fakeStudentProjects;
+
+    return data;
+  } catch (err) {
+    console.log(`Erro ao buscar projetos do Aluno`, err);
     return [];
   }
 };
