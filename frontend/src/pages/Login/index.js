@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import store from "../../store";
+import store from "../../storage";
 import { auth } from "../../services/auth";
 
 import Card from "../../components/Card";
