@@ -136,4 +136,543 @@ for (let i = 0; i < 20; i++) {
   });
 }
 
-export { fakeStudents, fakeStudentProjects };
+const fakeProjects = [
+  {
+    id: 12,
+    aluno: {
+      id: 3,
+      matricula: "123123",
+      nome: "Paulo",
+    },
+    nome: "fonxd",
+    descricao: "projeto do paulin",
+    validado: null,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+    ],
+  },
+  {
+    id: 13,
+    aluno: {
+      id: 3,
+      matricula: "123123",
+      nome: "Paulo",
+    },
+    nome: "fonxd",
+    descricao: "projeto do paulin",
+    validado: null,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+    ],
+  },
+  {
+    id: 14,
+    aluno: {
+      id: 3,
+      matricula: "123123",
+      nome: "Paulo",
+    },
+    nome: "fonxd",
+    descricao: "projeto do paulin 2",
+    validado: null,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+    ],
+  },
+  {
+    id: 18,
+    aluno: {
+      id: 4,
+      matricula: "123124",
+      nome: "Dayvson",
+    },
+    nome: "projetin",
+    descricao: "projetin brabo do dayv",
+    validado: true,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+      {
+        id: 2,
+        descricao: "Node.js",
+      },
+      {
+        id: 9,
+        descricao: "Spring boot",
+      },
+    ],
+  },
+  {
+    id: 17,
+    aluno: {
+      id: 4,
+      matricula: "123124",
+      nome: "Dayvson",
+    },
+    nome: "projetin",
+    descricao: "projetin brabo",
+    validado: true,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+      {
+        id: 2,
+        descricao: "Node.js",
+      },
+    ],
+  },
+  {
+    id: 12,
+    aluno: {
+      id: 3,
+      matricula: "123123",
+      nome: "Paulo",
+    },
+    nome: "fonxd",
+    descricao: "projeto do paulin",
+    validado: null,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+    ],
+  },
+  {
+    id: 13,
+    aluno: {
+      id: 3,
+      matricula: "123123",
+      nome: "Paulo",
+    },
+    nome: "fonxd",
+    descricao: "projeto do paulin",
+    validado: null,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+    ],
+  },
+  {
+    id: 14,
+    aluno: {
+      id: 3,
+      matricula: "123123",
+      nome: "Paulo",
+    },
+    nome: "fonxd",
+    descricao: "projeto do paulin 2",
+    validado: null,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+    ],
+  },
+  {
+    id: 18,
+    aluno: {
+      id: 4,
+      matricula: "123124",
+      nome: "Dayvson",
+    },
+    nome: "projetin",
+    descricao: "projetin brabo do dayv",
+    validado: true,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+      {
+        id: 2,
+        descricao: "Node.js",
+      },
+      {
+        id: 9,
+        descricao: "Spring boot",
+      },
+    ],
+  },
+  {
+    id: 17,
+    aluno: {
+      id: 4,
+      matricula: "123124",
+      nome: "Dayvson",
+    },
+    nome: "projetin",
+    descricao: "projetin brabo",
+    validado: true,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+      {
+        id: 2,
+        descricao: "Node.js",
+      },
+    ],
+  },
+  {
+    id: 12,
+    aluno: {
+      id: 3,
+      matricula: "123123",
+      nome: "Paulo",
+    },
+    nome: "fonxd",
+    descricao: "projeto do paulin",
+    validado: null,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+    ],
+  },
+  {
+    id: 13,
+    aluno: {
+      id: 3,
+      matricula: "123123",
+      nome: "Paulo",
+    },
+    nome: "fonxd",
+    descricao: "projeto do paulin",
+    validado: null,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+    ],
+  },
+  {
+    id: 14,
+    aluno: {
+      id: 3,
+      matricula: "123123",
+      nome: "Paulo",
+    },
+    nome: "fonxd",
+    descricao: "projeto do paulin 2",
+    validado: null,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+    ],
+  },
+  {
+    id: 18,
+    aluno: {
+      id: 4,
+      matricula: "123124",
+      nome: "Dayvson",
+    },
+    nome: "projetin",
+    descricao: "projetin brabo do dayv",
+    validado: true,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+      {
+        id: 2,
+        descricao: "Node.js",
+      },
+      {
+        id: 9,
+        descricao: "Spring boot",
+      },
+    ],
+  },
+  {
+    id: 17,
+    aluno: {
+      id: 4,
+      matricula: "123124",
+      nome: "Dayvson",
+    },
+    nome: "projetin",
+    descricao: "projetin brabo",
+    validado: true,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+      {
+        id: 2,
+        descricao: "Node.js",
+      },
+    ],
+  },
+  {
+    id: 12,
+    aluno: {
+      id: 3,
+      matricula: "123123",
+      nome: "Paulo",
+    },
+    nome: "fonxd",
+    descricao: "projeto do paulin",
+    validado: null,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+    ],
+  },
+  {
+    id: 13,
+    aluno: {
+      id: 3,
+      matricula: "123123",
+      nome: "Paulo",
+    },
+    nome: "fonxd",
+    descricao: "projeto do paulin",
+    validado: null,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+    ],
+  },
+  {
+    id: 14,
+    aluno: {
+      id: 3,
+      matricula: "123123",
+      nome: "Paulo",
+    },
+    nome: "fonxd",
+    descricao: "projeto do paulin 2",
+    validado: null,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+    ],
+  },
+  {
+    id: 18,
+    aluno: {
+      id: 4,
+      matricula: "123124",
+      nome: "Dayvson",
+    },
+    nome: "projetin",
+    descricao: "projetin brabo do dayv",
+    validado: true,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+      {
+        id: 2,
+        descricao: "Node.js",
+      },
+      {
+        id: 9,
+        descricao: "Spring boot",
+      },
+    ],
+  },
+  {
+    id: 17,
+    aluno: {
+      id: 4,
+      matricula: "123124",
+      nome: "Dayvson",
+    },
+    nome: "projetin",
+    descricao: "projetin brabo",
+    validado: true,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+      {
+        id: 2,
+        descricao: "Node.js",
+      },
+    ],
+  },
+  {
+    id: 12,
+    aluno: {
+      id: 3,
+      matricula: "123123",
+      nome: "Paulo",
+    },
+    nome: "fonxd",
+    descricao: "projeto do paulin",
+    validado: null,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+    ],
+  },
+  {
+    id: 13,
+    aluno: {
+      id: 3,
+      matricula: "123123",
+      nome: "Paulo",
+    },
+    nome: "fonxd",
+    descricao: "projeto do paulin",
+    validado: null,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+    ],
+  },
+  {
+    id: 14,
+    aluno: {
+      id: 3,
+      matricula: "123123",
+      nome: "Paulo",
+    },
+    nome: "fonxd",
+    descricao: "projeto do paulin 2",
+    validado: null,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+    ],
+  },
+  {
+    id: 18,
+    aluno: {
+      id: 4,
+      matricula: "123124",
+      nome: "Dayvson",
+    },
+    nome: "projetin",
+    descricao: "projetin brabo do dayv",
+    validado: true,
+    dataInicio: null,
+    dataFim: null,
+    alteradoEm: null,
+    tecnologias: [
+      {
+        id: 1,
+        descricao: "React.js",
+      },
+      {
+        id: 2,
+        descricao: "Node.js",
+      },
+      {
+        id: 9,
+        descricao: "Spring boot",
+      },
+    ],
+  },
+];
+
+export { fakeStudents, fakeStudentProjects, fakeProjects };

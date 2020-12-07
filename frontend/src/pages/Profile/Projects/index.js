@@ -25,7 +25,7 @@ import {
 } from "./styles";
 
 const Projects = ({ userId }) => {
-  const [showProjects, setShowProjects] = useState(false);
+  const [showProjects, setShowProjects] = useState(true);
   const [projects, setProjects] = useState([]);
   const [name, setName] = useState("");
   const [techs, setTechs] = useState("");

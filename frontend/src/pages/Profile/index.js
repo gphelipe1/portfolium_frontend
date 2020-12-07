@@ -7,6 +7,7 @@ import ProfileIcon from "../../assets/profile";
 import Card from "../../components/Card";
 
 import Projects from "./Projects";
+import Professor from "./Professor";
 import { Container, ProfileContainer, Info, Name, Description } from "./styles";
 
 const Profile = () => {
@@ -32,6 +33,7 @@ const Profile = () => {
           </Card>
         </ProfileContainer>
         {isStudent && <Projects userId={id} />}
+        {!isStudent && <Professor />}
       </Container>
     );
   };
