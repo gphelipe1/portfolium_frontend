@@ -18,6 +18,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const {
+    getUserId,
     setUserId,
     setUserName,
     setUserDescription,
@@ -40,11 +41,13 @@ const Login = () => {
       setUserDescription(descricao);
       setUserType(tipoUsuario.descricao);
 
-      history.push("/");
+      history.go(0);
     } catch (err) {
       console.log("Erro ao realizar login", err);
     }
   };
+
+  if (getUserId()) history.push("/profile");
 
   return (
     <Container>
