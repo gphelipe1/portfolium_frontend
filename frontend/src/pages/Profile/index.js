@@ -1,19 +1,21 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Redirect } from "react-router-dom";
 
 import { useStore } from "../../store";
-import { findStudentProjects } from "../../services/students";
 
 import ProfileIcon from "../../assets/profile";
 import Card from "../../components/Card";
 
+import Projects from "./Projects";
 import { Container, ProfileContainer, Info, Name, Description } from "./styles";
 
 const Profile = () => {
   const store = useStore();
   const id = store.getUserId();
   const name = store.getUserName();
+  const type = store.getUserType();
   const description = store.getUserDescription();
+  const isStudent = type === "aluno";
 
   const renderComponent = () => {
     if (!id) return <Redirect to={{ pathname: "/login" }} />;
@@ -29,17 +31,10 @@ const Profile = () => {
             </Info>
           </Card>
         </ProfileContainer>
+        {isStudent && <Projects userId={id} />}
       </Container>
     );
   };
-
-  useEffect(() => {
-    const fetch = async () => {
-      const result = await findStudentProjects(id);
-    };
-
-    fetch();
-  }, [id]);
 
   return <>{renderComponent()}</>;
 };
