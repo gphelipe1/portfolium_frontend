@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 import { useStore } from "../../store";
 import { auth } from "../../services/auth";
@@ -11,6 +12,8 @@ import Divider from "../../components/Divider";
 import { Container, CardWrapper, Form, Footer } from "./styles";
 
 const Login = () => {
+  const history = useHistory();
+
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
 
@@ -36,6 +39,8 @@ const Login = () => {
       setUserName(nome);
       setUserDescription(descricao);
       setUserType(tipoUsuario.descricao);
+
+      history.push("/");
     } catch (err) {
       console.log("Erro ao realizar login", err);
     }
