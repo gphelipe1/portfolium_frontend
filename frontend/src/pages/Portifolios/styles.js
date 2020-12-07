@@ -19,12 +19,6 @@ export const CardWrapper = styled.div`
   cursor: pointer;
 `;
 
-export const Name = styled.span`
-  display: flex;
-  height: 20%;
-  font-size: 18px;
-`;
-
 export const TagWrapper = styled.div`
   display: flex;
   width: 100%;

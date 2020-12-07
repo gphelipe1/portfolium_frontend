@@ -4,11 +4,12 @@ import { reduceText } from "../../utils";
 import { findStudents } from "../../services/students";
 
 import Tag from "../../components/Tag";
+import Name from "../../components/Name";
 import Card from "../../components/Card";
 import Divider from "../../components/Divider";
 import Description from "../../components/Description";
 
-import { Container, CardWrapper, Name, TagWrapper } from "./styles";
+import { Container, CardWrapper, TagWrapper } from "./styles";
 
 const Portifolio = () => {
   const [students, setStudents] = useState([]);
@@ -28,7 +29,7 @@ const Portifolio = () => {
     return (
       <>
         <Card>
-          <Name>{nome}</Name>
+          <Name value={nome} />
           <Divider />
           <Description value={reduceText(descricao)} />
           <Divider />
