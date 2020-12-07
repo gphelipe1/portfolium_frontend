@@ -3,16 +3,19 @@ import React, { useEffect, useState } from "react";
 import { reduceText } from "../../../utils";
 import { findStudentProjects } from "../../../services/students";
 
+import Add from "../../../assets/add";
 import Card from "../../../components/Card";
 import Name from "../../../components/Name";
+import Button from "../../../components/Button";
 import Divider from "../../../components/Divider";
 import TagWrapper from "../../../components/TagWrapper";
 import Description from "../../../components/Description";
 
-import { Container, Wrapper, ProjectWrapper } from "./styles";
+import { Container, Wrapper, ProjectWrapper, ButtonWrapper } from "./styles";
 
 const Projects = ({ userId }) => {
   const [projects, setProjects] = useState([]);
+  const [showProjects, setShowProjects] = useState(true);
 
   useEffect(() => {
     const fetch = async () => {
@@ -46,11 +49,29 @@ const Projects = ({ userId }) => {
     );
   };
 
+  const renderProjectsList = () => {
+    return (
+      <>
+        <ButtonWrapper>
+          <Button onClick={() => setShowProjects(false)}>
+            <Add />
+          </Button>
+        </ButtonWrapper>
+        <Card>
+          <Wrapper>{renderProjects()}</Wrapper>
+        </Card>
+      </>
+    );
+  };
+
+  const renderAdd = () => {
+    return <div>HEY</div>;
+  };
+
   return (
     <Container>
-      <Card>
-        <Wrapper>{renderProjects()}</Wrapper>
-      </Card>
+      {showProjects && renderProjectsList()}
+      {!showProjects && renderAdd()}
     </Container>
   );
 };

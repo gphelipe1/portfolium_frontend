@@ -21,3 +21,9 @@ export const ProjectWrapper = styled.div`
   height: 30%;
   margin: 1%;
 `;
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+  align-self: center;
+  margin-right: 1%;
+`;
