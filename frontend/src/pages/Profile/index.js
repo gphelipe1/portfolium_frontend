@@ -36,7 +36,6 @@ const Profile = () => {
   useEffect(() => {
     const fetch = async () => {
       const result = await findStudentProjects(id);
-      console.log(result);
     };
 
     fetch();

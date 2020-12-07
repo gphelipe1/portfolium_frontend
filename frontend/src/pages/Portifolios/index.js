@@ -39,7 +39,7 @@ const Portifolio = () => {
           <Divider />
           <TagWrapper>
             {tecnologias.map((el, idx) => (
-              <Tag key={idx}>{el}</Tag>
+              <Tag key={idx}>{el.descricao}</Tag>
             ))}
           </TagWrapper>
         </Card>

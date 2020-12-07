@@ -14,7 +14,13 @@ for (let i = 0; i < 20; i++) {
       Quisque laoreet lorem magna, hendrerit commodo ante pulvinar ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque mollis arcu eu ultricies. Curabitur in interdum metus. Duis eleifend convallis dictum. Nunc id dolor et dolor congue tincidunt et ut urna. Pellentesque mattis, sapien eget mattis faucibus, nunc libero rutrum erat, vitae lobortis elit nisl in magna. Donec consectetur auctor purus id imperdiet. Suspendisse potenti. Curabitur aliquet nisi ac urna scelerisque, vel cursus magna hendrerit. Nulla tristique egestas lorem eu porttitor.
       
       Nulla blandit vestibulum mattis. Mauris faucibus justo eget lacus condimentum, facilisis tincidunt quam faucibus. Etiam vel viverra nibh, a dictum libero. Phasellus in ullamcorper neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus mi nibh, lobortis pharetra lorem condimentum sagittis. Maecenas consequat ornare varius. Curabitur placerat ultricies arcu, eu consequat arcu mollis at. Phasellus in sapien sit amet libero volutpat aliquet. Aenean et lorem eu massa posuere viverra ut in augue. Morbi ac tempus tellus, vel suscipit nulla. Cras lacus odio, egestas vel sapien a, condimentum molestie magna. Fusce eu orci consequat, venenatis dolor id, commodo sapien. Sed ipsum lectus, pulvinar nec sapien at, rutrum dapibus risus. Nullam ac condimentum mauris, nec rutrum sem.`,
-    tecnologias: ["React", "Node", "Java", "JavaScript", "Python"],
+    tecnologias: [
+      { descricao: "React.js" },
+      { descricao: "Node" },
+      { descricao: "Java" },
+      { descricao: "JavaScript" },
+      { descricao: "Python" },
+    ],
   });
 
   fakeStudentProjects.push({
