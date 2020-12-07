@@ -40,6 +40,7 @@ export const Info = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 2%;
 `;
 
 export const Span = styled.span`

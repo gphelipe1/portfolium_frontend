@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 
+import { useStore } from "../../../store";
 import { reduceText } from "../../../utils";
+import { addProject } from "../../../services/projects";
 import { findStudentProjects } from "../../../services/students";
 
 import Add from "../../../assets/add";
@@ -25,9 +27,11 @@ import {
 const Projects = ({ userId }) => {
   const [showProjects, setShowProjects] = useState(false);
   const [projects, setProjects] = useState([]);
-  const [link, setLink] = useState("");
+  const [name, setName] = useState("");
   const [techs, setTechs] = useState("");
   const [description, setDescription] = useState("");
+
+  const store = useStore();
 
   useEffect(() => {
     const fetch = async () => {
@@ -43,6 +47,20 @@ const Projects = ({ userId }) => {
     const { value } = e.target;
 
     setter(value);
+  };
+
+  const onSubmit = async () => {
+    const mappedTechs = techs
+      .split(",")
+      .map((el) => ({ descricao: el.trim() }));
+
+    await addProject({
+      description,
+      name,
+      techs: mappedTechs,
+      alunoId: store.getUserId(),
+    });
+    setShowProjects(true);
   };
 
   const renderProjects = () => {
@@ -87,21 +105,17 @@ const Projects = ({ userId }) => {
       <NewProjectContainer>
         <Card>
           <Info>
+            <Description value="Nome" />
+            <Input onChange={onChange(setName)} />
             <Description value="Descrição" />
             <Input height="200px" onChange={onChange(setDescription)} />
-          </Info>
-        </Card>
-        <Card>
-          <Info>
             <Description value="Tecnologias Utilizadas" />
             <Input onChange={onChange(setTechs)} />
-            <Description value="Link" />
-            <Input onChange={onChange(setLink)} />
           </Info>
+          <Button onClick={() => onSubmit()}>
+            <Span>Enviar</Span>
+          </Button>
         </Card>
-        <Button>
-          <Span>Enviar</Span>
-        </Button>
       </NewProjectContainer>
     );
   };
