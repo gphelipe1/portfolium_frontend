@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react";
 import { reduceText } from "../../utils";
 import { findStudents } from "../../services/students";
 
-import Tag from "../../components/Tag";
+import TagWrapper from "../../components/TagWrapper";
 import Name from "../../components/Name";
 import Card from "../../components/Card";
 import Divider from "../../components/Divider";
 import Description from "../../components/Description";
 
-import { Container, CardWrapper, TagWrapper } from "./styles";
+import { Container, CardWrapper } from "./styles";
 
 const Portifolio = () => {
   const [students, setStudents] = useState([]);
@@ -25,6 +25,7 @@ const Portifolio = () => {
 
   const renderCard = (student) => {
     const { descricao, nome, tecnologias } = student;
+    const values = tecnologias.map((el) => el.descricao);
 
     return (
       <>
@@ -33,11 +34,7 @@ const Portifolio = () => {
           <Divider />
           <Description value={reduceText(descricao)} />
           <Divider />
-          <TagWrapper>
-            {tecnologias.map((el, idx) => (
-              <Tag key={idx}>{el.descricao}</Tag>
-            ))}
-          </TagWrapper>
+          <TagWrapper values={values} />
         </Card>
       </>
     );
