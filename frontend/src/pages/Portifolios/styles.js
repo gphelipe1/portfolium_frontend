@@ -25,15 +25,6 @@ export const Name = styled.span`
   font-size: 18px;
 `;
 
-export const Description = styled.span`
-  display: flex;
-  padding: 10px 0;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: justify;
-  color: #949191;
-`;
-
 export const TagWrapper = styled.div`
   display: flex;
   width: 100%;
