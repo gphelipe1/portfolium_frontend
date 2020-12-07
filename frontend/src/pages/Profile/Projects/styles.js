@@ -27,3 +27,22 @@ export const ButtonWrapper = styled.div`
   align-self: center;
   margin-right: 1%;
 `;
+
+export const NewProjectContainer = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+
+export const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
+
+export const Span = styled.span`
+  font-size: 24px;
+  padding: 12px;
+`;
