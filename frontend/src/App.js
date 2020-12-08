@@ -22,7 +22,15 @@ const App = () => {
         <Button>Login</Button>
       </Link>
     ) : (
-      <Wrapper />
+      <Wrapper>
+        <Button
+          onClick={() => {
+            localStorage.clear();
+          }}
+        >
+          Logout
+        </Button>
+      </Wrapper>
     );
   };
 
