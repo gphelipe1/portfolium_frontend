@@ -1,4 +1,4 @@
-import { fakeProjects } from "./data";
+import api from "./api";
 
 export const addProject = async ({ alunoId, name, description, techs }) => {
   const body = {
@@ -8,15 +8,21 @@ export const addProject = async ({ alunoId, name, description, techs }) => {
     tecnologias: techs,
   };
 
-  console.log(body);
+  const response = await api.post("/projetos", body);
+
+  return response.data;
 };
 
 export const validateProject = async ({ id, validate }) => {
   const body = { validado: validate };
 
-  console.log(body, id);
+  const response = await api.put("/projetos/:id", body);
+
+  return response.data;
 };
 
 export const getProjects = async () => {
-  return fakeProjects;
+  const response = await api.get("/projetos");
+
+  return response.data;
 };

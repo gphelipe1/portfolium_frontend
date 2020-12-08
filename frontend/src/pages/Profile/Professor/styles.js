@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
 export const ProjectWrapper = styled.div`
   display: flex;
   width: 20%;
-  height: 20%;
+  height: 30%;
   margin: 1%;
 `;
 
